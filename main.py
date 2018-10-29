@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>
+    User Signup</title>
+    <style>
+    </stlye>
+
+
+
 
 </head>
     <body>
-    <h2>Signup</h2>
+    
     <form method="POST">
         <input type="text" name="user_id"/>
         
