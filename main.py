@@ -8,9 +8,9 @@ app.config['DEBUG'] = True
 
 # THIS CREATES ROUTE TO DISPLAY THE FORM
 
-@app.route('/templates')
+@app.route('/')
 def display_user_signup_form():
-    return render_template('index.html')
+    return render_template('home-page')
 
 # THESE ARE FUNCTIONS FOR THE VALIDATIONS
 
@@ -27,7 +27,7 @@ def char_length(x):
         return False
 
 def email_at_symbol(x):
-    if x.count('@') >= 1:
+    if x.count('@') !=0:
         return True
     else:
         return False
@@ -175,7 +175,7 @@ def user_signup_complete():
         username = username
         return redirect('/welcome?username={0}'.format(username))
     else:
-        return render_template('main.html', username_error=username_error, username=username, password_error=password_error, password=password, password_validate_error=password_validate_error, password_validate=password_validate, email_error=email_error, email=email)
+        return render_template('base.html', username_error=username_error, username=username, password_error=password_error, password=password, password_validate_error=password_validate_error, password_validate=password_validate, email_error=email_error, email=email)
 
 # THIS REDIRECTS TO A WELCOME PAGE
 
