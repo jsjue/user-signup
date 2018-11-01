@@ -1,7 +1,5 @@
-{ % extends "base.html" % }
+{% extends "base.html" %}
 
-{ % block content % }
-
-    <h2>Welcome, {{userid}}!</h2>
-
-{ % endblock}
+{% block content %}
+<h1>Welcome {{username}}!</h1>
+{% endblock %}
