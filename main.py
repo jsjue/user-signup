@@ -10,7 +10,7 @@ app.config['DEBUG'] = True
 
 @app.route('/')
 def display_user_signup_form():
-    return render_template('home-page')
+    return render_template('base')
 
 # THESE ARE FUNCTIONS FOR THE VALIDATIONS
 
